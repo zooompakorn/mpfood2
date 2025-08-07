@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Home.css" />
+    <title>M.P. FOOD PRODUCTION COMPANY LIMITED</title>
+    <link rel="icon" href="image/MP.logo.png" />
+    <script
+      src="https://kit.fontawesome.com/a34fa7ecb9.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body id="body">
+    <nav>
+      <div class="nav_Container" id="nav_Container">
+        <a href="" class="logo"
+          ><img src="image/MP_transparent_3.png" alt=""
+        /></a>
+
+        <div class="hamburger" onclick="toggle()">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+        <div class="menu" id="menu">
+          <ul class="nav-link">
+            <li><a href="#body">Service</a></li>
+            <li><a href="#sideProduct">Product</a></li>
+            <li><a href="#sideAbout">About</a></li>
+            <li><a href="#product">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="menuToggle" id="menuToggle">
+      <ul class="nav-link">
+        <li><a href="#head">Service</a></li>
+        <li><a href="#sideProduct">Product</a></li>
+        <li><a href="#sideAbout">About</a></li>
+        <li><a href="#product">Contact</a></li>
+      </ul>
+    </div>
+
+    <header class="header">
+      <img src="image/welcome.png" alt="" class="welcome_image" id="head" />
+    </header>
+
+    <main>
+      <div id="sideProduct"></div>
+      <!-- Product -->
+      <div class="product_container" id="product">
+        <h1 class="product_header">PRODUCT</h1>
+        <div class="product_list_container">
+          <div class="item">
+            <div class="img_product1">
+              <img src="image/แผ่นกลม.png" alt="" class="product1" />
+            </div>
+          </div>
+          <div class="item">
+            <div class="img_product2">
+              <img src="image/แผ่นเหลี่ยม.png" alt="" class="product1" />
+            </div>
+            <!-- <div class="text_product">
+              <h3>แผ่นฟองเต้าหู้แบบสี่เหลี่ยม</h3>
+            </div> -->
+          </div>
+          <div class="item">
+            <div class="img_product3">
+              <img src="image/อกไก่.png" alt="" class="product1" />
+            </div>
+            <!-- <div class="text_product">
+              <h3>แผ่นฟองเต้าหู้แบบกลม</h3>
+            </div> -->
+          </div>
+          <div class="item">
+            <div class="img_product4">
+              <img src="image/ฟองม้วน.png" alt="" class="product1" />
+            </div>
+            <!-- <div class="text_product">
+              <h3>แผ่นฟองเต้าหู้แบบกลม</h3>
+            </div> -->
+          </div>
+          <div class="item">
+            <div class="img_product5" id="img_product5">
+              <img src="image/เต้าหู้ก้อน.png" alt="" class="product1" />
+            </div>
+            <!-- <div class="text_product">
+              <h3>แผ่นฟองเต้าหู้แบบกลม</h3>
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- About -->
+      <div id="sideAbout"></div>
+      <div id="about_container">
+        <div class="about">
+          <h1>ABOUT</h1>
+          <p>Lorem ipsum dolor sit, culpa aliquid quas obcaecati! Voluptate?</p>
+        </div>
+
+        <div class="history_container">
+          <div class="history1">
+            <div class="text1">
+              <div class="text_format">
+                <h1>2000</h1>
+                <h1>Our Beginnings</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                  voluptatem at iure explicabo possimus nobis aut fuga veniam
+                  esse nostrum praesentium suscipit cum quidem similique magni,
+                  a nam sapiente perspiciatis.
+                </p>
+              </div>
+            </div>
+            <div class="img1">
+              <div class="img_format">
+                <img src="image/MP_transparent_2.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="history1">
+            <div class="text1">
+              <div class="text_format">
+                <h1>2000</h1>
+                <h1>Our Beginnings</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                  voluptatem at iure explicabo possimus nobis aut fuga veniam
+                  esse nostrum praesentium suscipit cum quidem similique magni,
+                  a nam sapiente perspiciatis.
+                </p>
+              </div>
+            </div>
+            <div class="img1">
+              <div class="img_format">
+                <img src="image/MP_transparent_2.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="history1">
+            <div class="text1">
+              <div class="text_format">
+                <h1>2000</h1>
+                <h1>Our Beginnings</h1>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+                  voluptatem at iure explicabo possimus nobis aut fuga veniam
+                  esse nostrum praesentium suscipit cum quidem similique magni,
+                  a nam sapiente perspiciatis.
+                </p>
+              </div>
+            </div>
+            <div class="img1">
+              <div class="img_format">
+                <img src="image/MP_transparent_2.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script>
+    const menuToggle = document.getElementById("menuToggle");
+    function toggle() {
+      if (menuToggle.classList.contains("active")) {
+        menuToggle.classList.remove("active");
+      } else {
+        menuToggle.classList.add("active");
+      }
+    }
+
+    function close() {
+      if (menuToggle.classList.contains("active")) {
+        menuToggle.classList.remove("active");
+      } else {
+      }
+    }
+    window.onresize = function () {
+      if (window.innerWidth > 1000) {
+        if (menuToggle.classList.contains("active")) {
+          menuToggle.classList.remove("active");
+        } else {
+          menuToggle.classList.remove("active");
+        }
+      }
+    };
+    window.addEventListener("scroll", function () {
+      const navbar = document.getElementById("nav_Container");
+      if (window.scrollY > 10) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 10) {
+        menuToggle.classList.remove("active");
+      }
+    });
+
+    document.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", () => {
+        close(); // ปิดเมนูหลังคลิก
+      });
+    });
+  </script>
+</html>

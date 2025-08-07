@@ -1,0 +1,400 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+/* NAV */
+
+.nav_Container {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  position: fixed;
+  z-index: 999;
+  transition: 0.5s all ease-in-out;
+  padding-top: 10px;
+}
+
+/* Scroll */
+#nav_Container.scrolled {
+  background-color: #eee4ce;
+  height: 90px;
+  transition: 0.5s all ease-in-out;
+}
+.nav_Container > a {
+  width: 70%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav_Container > a > img {
+  width: 300px;
+  height: 200px;
+}
+/* Hamburger */
+.hamburger {
+  display: none;
+  width: 30%;
+  height: 100%;
+}
+.hamburger > i {
+  width: 100%;
+  height: 100%;
+  font-size: 70px;
+  color: #ffc000;
+}
+
+/* MENU */
+.menu {
+  height: 100%;
+  width: 100%;
+}
+.menu > ul {
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.menu > ul > li {
+  list-style-type: none;
+  font-size: 20px;
+}
+.menu > ul > li > a {
+  color: black;
+  text-decoration: none;
+  font-weight: 900;
+  text-shadow: 2px 1px #ffc000;
+}
+/* Menu toggle */
+.menuToggle {
+  background-color: #eee4ce;
+  width: 100%;
+  height: auto;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  position: fixed;
+  top: 120px;
+  transition: 0.5s all ease-in-out;
+  z-index: 999;
+}
+.menuToggle.active {
+  max-height: 500px; /* ปรับตามความสูงเมนู */
+  opacity: 1;
+  padding: 10px;
+}
+.menuToggle > ul {
+  display: flex;
+  list-style: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menuToggle > ul > li {
+  padding: 20px 0;
+}
+.menuToggle > ul > li > a {
+  text-decoration: none;
+  font-size: 18px;
+}
+/* Header */
+.header {
+  height: 800px;
+  /* margin-bottom: 20px; */
+}
+.welcome_image {
+  width: 100%;
+  height: 100%;
+}
+/* Product */
+#sideProduct {
+  width: 100%;
+  height: 130px;
+}
+.product_container {
+  width: 100%;
+  height: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.product_header {
+  font-size: 75px;
+  justify-self: center;
+  position: relative;
+}
+.product_header::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #ffc000, #009900);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.product_list_container {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.item {
+  width: 300px;
+  height: 400px;
+  margin: 20px 10px;
+}
+
+.img_product1,
+.img_product2,
+.img_product4,
+.img_product3,
+.img_product5 {
+  width: 100%;
+  height: 90%;
+  position: relative;
+}
+
+.img_product1::after {
+  content: "ฟองเต้าหู้ชนิดแผ่นกลม";
+}
+
+.product1 {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px 15px 15px 15px;
+}
+
+.img_product2::after {
+  content: "ฟองเต้าหู้ชนิดแผ่นเหลี่ยม";
+}
+
+.img_product3::after {
+  content: "ฟองเต้าหู้อกไก่";
+}
+
+.img_product4::after {
+  content: "ฟองเต้าหู้ม้วนสด";
+}
+.img_product5::after {
+  content: "ฟองเต้าหู้ก้อน";
+}
+.img_product1:hover::after,
+.img_product2:hover::after,
+.img_product3:hover::after,
+.img_product4:hover::after,
+.img_product5:hover::after {
+  height: 390px;
+}
+
+.img_product1::after,
+.img_product2::after,
+.img_product3::after,
+.img_product4::after,
+.img_product5::after {
+  width: 300px;
+  height: 350px;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  top: 0;
+  z-index: -1;
+  font-size: 20px;
+  transition: height 0.3s ease-in-out;
+}
+
+/* About */
+#sideAbout {
+  width: 100%;
+  height: 100px;
+}
+#about_container {
+  width: 100%;
+  height: auto;
+  background-color: #f3f3f3;
+  padding: 20px 0;
+}
+
+.about {
+  width: 100%;
+  height: 100px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+}
+.about > h1 {
+  font-size: 60px;
+  padding-bottom: 5px;
+}
+.about > p {
+  color: rgb(58, 58, 58);
+}
+
+/* History */
+.history_container {
+  width: 100%;
+  height: 1000px;
+  /* background-color: #ffc000; */
+}
+
+.history1 {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+.text1 {
+  width: 40%;
+  height: 100%;
+  justify-items: end;
+}
+.img1 {
+  width: 20%;
+  height: 100%;
+  justify-items: center;
+  align-content: center;
+}
+.img1::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100px;
+  background-color: rgba(205, 204, 204, 0.4);
+  left: 50%;
+  transform: translateX(-50%);
+}
+.text_format {
+  width: 350px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-align: end;
+  padding: 0 20px;
+  padding-top: 60px;
+}
+.text_format > p {
+  font-size: 18px;
+  transition: 1s ease-in-out;
+}
+.img_format {
+  width: 200px;
+  height: 200px;
+  background-color: rgba(205, 204, 204, 0.4);
+  border-radius: 50%;
+}
+.img_format > img {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1000px) {
+  #nav_Container.scrolled {
+    transition: none;
+    height: 120px;
+  }
+  .nav_Container {
+    background-color: #eee4ce;
+    height: 120px;
+    transition: none;
+  }
+  .nav_Container > a {
+    width: 70%;
+  }
+  .nav_Container > div {
+    width: 30%;
+  }
+  .hamburger {
+    display: block;
+  }
+  .hamburger > i {
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu {
+    width: 500px;
+    height: 300px;
+    display: none;
+    width: fit-content;
+    background-color: #ffc000;
+    justify-content: flex-end;
+  }
+  .menu > ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .text_format {
+    width: 220px;
+  }
+  .text_format > p {
+    font-size: 16px;
+    transition: 1s ease-in-out;
+  }
+  .img_format {
+    width: 150px;
+    height: 150px;
+  }
+  .img1::after {
+    height: 150px;
+  }
+}
+
+@media (max-width: 750px) {
+  .text1 {
+    width: 70%;
+    order: 2;
+    margin-left: 30px;
+    margin-right: 20px;
+  }
+  .text_format {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    text-align: start;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 80px;
+  }
+
+  .text_format > h1 {
+    font-size: 20px;
+  }
+  .img1 {
+    position: relative;
+    order: 1;
+    margin-left: 30px;
+  }
+}
+
+@media (max-width: 500px) {
+  .header {
+    margin-top: 100px;
+  }
+  #top {
+    width: 100%;
+    height: 10px;
+  }
+}
